@@ -22,6 +22,7 @@ class LLMService:
         self.api_key = os.getenv("GROQ_API_KEY")
         self.llm = ChatGroq(
             model="llama-3.3-70b-versatile",
+            groq_api_key=self.api_key,
             temperature=0.3,
         )
         self.runnable = self.prompt | self.llm.with_structured_output(schema=Expense)

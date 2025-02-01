@@ -6,3 +6,7 @@ langchain-groq
 
 flask
 python-dotenv
+
+kafka-python
+pydantic
+six
