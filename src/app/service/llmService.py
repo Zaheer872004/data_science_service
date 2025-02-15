@@ -1,7 +1,10 @@
-from dotenv import load_dotenv
+from typing import Optional
+from langchain_core.pydantic_v1 import BaseModel, Field
+from dotenv import load_dotenv, dotenv_values 
+
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
-from service.Expense import Expense
+from app.service.Expense import Expense
 import os
 
 class LLMService:
