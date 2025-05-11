@@ -28,7 +28,7 @@ producer = KafkaProducer(bootstrap_servers=kafka_bootstrap_servers,
 def handle_message():
     try:
 
-        user_id = request.headers.get('x-user-id')
+        user_id = request.headers.get('X-User-ID')
         if not user_id:
             return jsonify({'error': 'x-user-id header is required'}), 400
 
